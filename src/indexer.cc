@@ -679,9 +679,9 @@ public:
   IndexDataConsumer(IndexParam &param) : param(param) {}
   void initialize(ASTContext &ctx) override { this->ctx = param.ctx = &ctx; }
 #if LLVM_VERSION_MAJOR < 10 // llvmorg-10-init-12036-g3b9715cb219
-# define handleDeclOccurrence handleDeclOccurence
+# define handleDeclOccurence handleDeclOccurence
 #endif
-  bool handleDeclOccurrence(const Decl *d, index::SymbolRoleSet roles,
+  bool handleDeclOccurence(const Decl *d, index::SymbolRoleSet roles,
                             ArrayRef<index::SymbolRelation> relations,
                             SourceLocation src_loc,
                             ASTNodeInfo ast_node) override {
